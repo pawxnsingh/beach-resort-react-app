@@ -6,7 +6,12 @@ import react from "@vitejs/plugin-react";
 export default defineConfig({
     envPrefix: "REACT_APP_",
     plugins: [
-      react(), 
-      // envCompatible()
+        react(),
+        // envCompatible()
     ],
+    build: {
+        rollupOptions: {
+            input: "src/main.jsx",
+        },
+    },
 });
